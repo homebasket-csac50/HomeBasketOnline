@@ -1,0 +1,10 @@
+<?php 
+	session_start();
+	unset($_SESSION['email']);
+	unset($_SESSION['token']);
+	unset($_SESSION['token_time']);
+	unset($_SESSION['ct_cart']);
+	session_destroy();
+	header('location:index.php');
+	exit;	
+?>

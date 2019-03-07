@@ -15,34 +15,98 @@ $con= mysqli_connect('localhost','root','','homebasket');
 		}
 ?>
 
+<html>
+<style>
+body{
+background-image:url("/new%20Projects/homeBasketOnline/assets/s.jpg");
+
+
+ background-position:center;
+ background-size:cover;
+ background-repeat:no-repeat;
+ margin-top:100;
+ margin-left:100;
+ }
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;       
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 16px 20px;
+  text-decoration: none;
+  
+}
+
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 4px;
+  margin-left: 1200px;
+  margin-top: -50px;
+  cursor: pointer;
+}
+
+.button1{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 4px;
+  margin-left: 500px;
+  margin-top: -30px;
+  cursor: pointer;
+  }
+
+table, th, td {
+  border: 1px solid black;
+ 
+ 
+   margin-left: 500px;
+  margin-top: 50px;
+  }
+  
+ 
+ </style>
+<body>
+<a href='logout.php'><input type="button" class="button" value="logout"></a>
+
+<div>	
+
+<ul>
+  <li><a href="#HOME">HOME</a></li>
+  <li><a href="category.php">CATEGORY</a></li>
+  <li><a href="#PRODUCT"><b>PRODUCT</b>s</a></li>
+
+</ul>
+
 <table>
-  <tr>
-	  <th>Product Id</th>
-      <th>Category Name</th>
-	  <th>Product Name</th>
-      <th>Quantity</th>
-  </tr>
-  <tr>
-
-	<?php 
-		
-		//$result = fetchProductsWithCategory()
-		$query1 = "select p.product_id,c.category_name, p.product_name, p.quantity from category c join product_details p on c.category_id = p.category_id";
-		$result1=mysqli_query($con,$query1);
-		$output='';
-		while($row = $result1->fetch_assoc()) {
-			$output.= "<tr><td>{$row['product_id']}</td>
-            <td>'{$row['category_name']}'</td>
-            <td>'{$row['product_name']}'</td>
-            <td>'{$row['quantity']}'</td></tr>";
-								
-		}
-		echo $output;
-	?>
-
-  </tr>
-</table>
-
+<tr>
+<td>
 <form action="products.php" method="POST">
 		
 
@@ -77,6 +141,54 @@ $con= mysqli_connect('localhost','root','','homebasket');
 
 
 		<div class="container" style="background-color:#f1f1f1">
-		<button type="submit" name="insertSubmit" class="submit">Submit</button>
+		<button type="submit" name="insertSubmit" class="submit">add product</button>
+    <button type="submit" name="insertSubmit" class="submit">edit</button>
+    <button type="submit" name="insertSubmit" class="submit">delete</button>
+
 		</div>
 	  </form>
+
+</td></tr>
+</table>  
+<table> 
+ <tr>
+     
+    
+
+    
+    
+    
+    <th>Product ID</th>
+    
+	<th>Category Name</th>
+	<th>Product Name </th>
+	<th>Quantity</th>
+	
+  </tr>
+
+	<?php 
+		
+		//$result = fetchProductsWithCategory()
+		$query1 = "select p.product_id,c.category_name, p.product_name, p.quantity from category c join product_details p on c.category_id = p.category_id";
+		$result1=mysqli_query($con,$query1);
+		$output='';
+		while($row = $result1->fetch_assoc()) {
+			$output.= "<tr><td>{$row['product_id']}</td>
+            <td>{$row['category_name']}</td>
+            <td>{$row['product_name']}</td>
+            <td>{$row['quantity']}</td>
+            </tr>";
+								
+		}
+		echo $output;
+	?>
+
+
+
+
+
+</div> 
+</table>    
+
+		</body>
+</html>

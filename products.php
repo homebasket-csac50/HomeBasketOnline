@@ -18,7 +18,7 @@ $con= mysqli_connect('localhost','root','','homebasket');
 <html>
 <style>
 body{
-background-image:url("/new%20Projects/homeBasketOnline/assets/s.jpg");
+background-image:url("/new%20Projects/homeBasketOnline/assets/bg.png");
 
 
  background-position:center;
@@ -117,7 +117,7 @@ table, th, td {
 					<?php 
 						
 							
-							$query = "SELECT * from category";
+							$query = "SELECT * from category where status = 1";
 							$result=mysqli_query($con,$query);
 							
 							
@@ -150,7 +150,7 @@ table, th, td {
 
 </td></tr>
 </table>  
-<table> 
+<table style="color:#fff"> 
  <tr>
      
     
@@ -169,8 +169,17 @@ table, th, td {
 	<?php 
 		
 		//$result = fetchProductsWithCategory()
-		$query1 = "select p.product_id,c.category_name, p.product_name, p.quantity from category c join product_details p on c.category_id = p.category_id";
-		$result1=mysqli_query($con,$query1);
+		//$query1 = "select p.product_id,c.category_name, p.product_name, p.quantity from category c join product_details p on c.category_id = p.category_id";
+    $query1 = "SELECT
+                  p.product_id,
+                  c.category_name,
+                  p.product_name,
+                  p.quantity
+              FROM
+                  category c
+              JOIN product_details p ON
+                  c.category_id = p.category_id and c.status = 1";
+    $result1=mysqli_query($con,$query1);
 		$output='';
 		while($row = $result1->fetch_assoc()) {
 			$output.= "<tr><td>{$row['product_id']}</td>

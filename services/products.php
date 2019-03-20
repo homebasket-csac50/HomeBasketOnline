@@ -10,14 +10,15 @@
         return 1;
     }
 
-    function updateProduct($productId, $productName) {
-        $sql = "UPDATE product_details set product_name = '{$productName}' where product_id = '{$productId}'";
+    function updateProduct($productId, $productName, $status) {
+        $query = "UPDATE product_details set product_name = '{$productName}', status = '{$status}' where product_id = '{$productId}'";
         $connect = new Connection();
         $connect->runQuery($query);
         $connect->close_connection();
         return 1;
     }
 
+    
     function fetchProducts($productId) {
         $placeholder = '';
 

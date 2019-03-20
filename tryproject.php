@@ -36,7 +36,7 @@
 <head>
 <style>
 body{
-background-image:url("/new%20Projects/homeBasketOnline/assets/brook1.jpg");
+background-image:url("/new%20Projects/homeBasketOnline/assets/ss1.jpg");
 height:700px;
 background-position:center;
 background-size:cover;
@@ -73,8 +73,8 @@ li a:hover {
   margin-top: 40px;
   cursor: pointer;
 }
-.category { 
-  background-color: #0000ff; 
+.category {
+  background-color: #0000ff;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -98,6 +98,97 @@ th, td {
   width:50px;
   padding:4px;
   text-align: left;
+
+}
+ul#menu {
+    margin-left: 700px;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: #c7004c;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#30e3ca;
+    min-width: 0.5px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+    padding: 10px 16px;
+    z-index: 1;
+}
+table, th, td {
+  margin-top:10px;
+  margin-left: 507px;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  height:20px;
+  width:50px;
+  padding:4px;
+  text-align: left;
+}
+body{
+		
+		background-image:url("ss1.jpg");
+        height:700px;
+background-position:center;
+background-size:cover;
+background-repeat: no-repeat;
+
+		}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 4px;
+  margin-left: 1250px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.category {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 4px;
+  margin-top:-40px;
+  margin-left: 510px;
+  cursor: pointer;
 }
 </style>
 </head>

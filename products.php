@@ -186,7 +186,7 @@ table, th, td {
             <input type='hidden' name='category_name' id='category_name' value='{$row['category_name']}'><td>{$row['category_name']}</td>
             <input type='hidden' name='product_name' id='product_name' value='{$row['product_name']}'><td>{$row['product_name']}</td>
             <input type='hidden' name='quantity' id='quantity' value='{$row['quantity']}'><td>{$row['quantity']}</td>
-            <td><input type='submit' value='Submit' name='deleteProduct'/></td>
+            <td><input type='submit' value='deleteProduct' name='deleteProduct'/></td>
             <td><input type='button' id='myBtn' value='Edit' onclick=openbox1({$row['product_id']},'{$row['product_name']}') ></td</tr></form>";
 								
 		}

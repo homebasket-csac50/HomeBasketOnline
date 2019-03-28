@@ -107,7 +107,8 @@ table, th, td {
  </style>
 <body>
 <a href='logout.php'><input type="button" class="button" value="logout"></a>
-
+div class="logo">
+<img src="/new%20Projects/homeBasketOnline/assets/loogoo.png" alt="loogoo" style="width:120px;height:80px;margin-top:-70px;margin-bottom:50px;">
 <div>	
 
 <ul>
@@ -145,8 +146,7 @@ table, th, td {
 		</div>
     <div class="container" style="background-color:#f1f1f1">
 		<button type="submit" name="insertSubmit" class="submit">add product</button>
-    <button type="submit" name="insertSubmit" class="submit">edit</button>
-    <button type="submit" name="insertSubmit" class="submit">delete</button>
+    
 
 		</div>
 	  </form>
@@ -186,7 +186,7 @@ table, th, td {
             <input type='hidden' name='category_name' id='category_name' value='{$row['category_name']}'><td>{$row['category_name']}</td>
             <input type='hidden' name='product_name' id='product_name' value='{$row['product_name']}'><td>{$row['product_name']}</td>
             <input type='hidden' name='quantity' id='quantity' value='{$row['quantity']}'><td>{$row['quantity']}</td>
-            <td><input type='submit' value='deleteProduct' name='deleteProduct'/></td>
+            <td><input type='submit' value='delete' name='deleteProduct'/></td>
             <td><input type='button' id='myBtn' value='Edit' onclick=openbox1({$row['product_id']},'{$row['product_name']}') ></td</tr></form>";
 								
 		}

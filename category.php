@@ -12,10 +12,8 @@
   if(isset($_POST['deleteSubmit'])) {
     $categoryId = $_POST['category_id'];
     $categoryName = $_POST['category_name'];
- 
     updateCategory($categoryId, $categoryName, 0);
   }
-
   if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
 		   echo '';
     } else header('location:index.php');
@@ -109,7 +107,7 @@ var category_name = getElementById('category_id').value;
 </script>
 <body>
 <input type="button" class="button" value="Logout">
-<div class="logo">
+<div >
 <img src="/new%20Projects/homeBasketOnline/assets/loogoo.png" alt="loogoo" style="width:120px;height:80px;margin-top:-70px;margin-bottom:50px;">
 <input type="button" class="category" value="ADD CATEGORY">
 <div>
